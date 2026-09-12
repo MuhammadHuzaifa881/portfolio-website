@@ -33,7 +33,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     description:
       "Worked on a team responsible for developing new features and updating old codebases to latest technologies. Learned alot about web development and CI/CD development cycle.",
   },
-    {
+  {
     title: "React Native Intern",
     organisation: {
       name: "Hello World Technologies",

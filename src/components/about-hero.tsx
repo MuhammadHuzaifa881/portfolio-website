@@ -1,12 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
-
+import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
-
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
 import heroProfileImg from "@/public/images/heroProfile.png";
 import DuotoneImage from "./duotone-image";
+
+import PakistanFlag from "@/public/pakistan-flag.png";
 
 export default function AboutHero() {
   return (
@@ -60,8 +60,8 @@ export default function AboutHero() {
             <div className="relative flex w-12 gap-4 overflow-hidden rounded-md">
               <Image
                 className="-z-10 h-full w-full bg-cover bg-no-repeat"
-                alt="Indian flag"
-                src="https://flagcdn.com/in.svg"
+                alt="Pakistan flag"
+                src={PakistanFlag}
                 width={15}
                 height={15}
               />

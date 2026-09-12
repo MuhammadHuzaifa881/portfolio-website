@@ -2,36 +2,48 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Software Developer",
+    title: "MERN Stack Developer",
     organisation: {
-      name: "Skima",
-      href: "https://skima.ai/",
+      name: "SCube",
+      href: "https://scube.com/",
     },
-    date: "Oct 2023 - Present",
-    location: "Mumbai",
-    description: "Reactjs and Nextjs app development",
+    date: "January 2025 - Present",
+    location: "Onsite",
+    description:
+      "Developing and maintaining scalable web applications using React.js, Next.js, Node.js, and modern frontend technologies. Building user-focused features, integrating APIs, and contributing to full-stack application development.",
   },
   {
-    title: "Engineering Trainee",
+    title: "Frontend Developer",
     organisation: {
-      name: "Hexaware",
-      href: "https://hexaware.com/",
+      name: "Programmers Force",
+      href: "https://programmersforce.com/",
     },
-    date: "July 2023 - Sep 2023",
-    location: "Remote",
+    date: "November 2024 - January 2025",
+    location: "Onsite",
     description:
-      "Learned to work we monorepo and got to learn application architecture, scalling and build tooling to improve CI/CD of micro services.",
+      "Developed responsive and interactive web applications using React.js and Next.js. Collaborated with the development team to implement features, improve user interfaces, and maintain application quality.",
   },
   {
-    title: "Frontend Developer Intern",
+    title: "Frontend Developer",
     organisation: {
-      name: "Countour Software House",
-      href: "https://masterinfotech.com/",
+      name: "GenArk",
+      href: "https://genark.ai/",
     },
-    date: "Winter - (2022-2023)",
+    date: "October 2023 - December 2024",
     location: "Remote",
     description:
-      "Worked on a team responsible for developing new features and updating old codebases to latest technologies. Learned alot about web development and CI/CD development cycle.",
+      "Worked on Next.js applications within a monorepo environment, gaining experience in application architecture, scalable development, and build tooling. Contributed to improving development workflows and CI/CD processes for microservices.",
+  },
+  {
+    title: "MERN Stack Developer",
+    organisation: {
+      name: "Contour Software House",
+      href: "https://contour-software.com/",
+    },
+    date: "September 2022 - June 2023",
+    location: "Onsite",
+    description:
+      "Developed and enhanced web applications using the MERN stack. Implemented new features, modernized existing codebases, and collaborated with the team throughout the software development and CI/CD lifecycle.",
   },
   {
     title: "React Native Intern",
@@ -39,9 +51,9 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
       name: "Hello World Technologies",
       href: "https://helloworldtech.com/",
     },
-    date: "Winter - 2021",
+    date: "June 2021 - September 2021",
     location: "Onsite",
     description:
-      "Worked on a team responsible for developing new features and updating old codebases to latest technologies. Learned alot about web development and CI/CD development cycle.",
+      "Gained hands-on experience in mobile application development using React Native. Collaborated with the development team to implement features, improve existing code, and strengthen practical software development skills.",
   },
 ];

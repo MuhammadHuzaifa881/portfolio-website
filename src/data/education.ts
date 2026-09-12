@@ -2,6 +2,17 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EDUCATION: ExperienceShowcaseListItemProps[] = [
   {
+    title: "Master of Science in Computer Science (MSCS)",
+    organisation: {
+      name: "Khwaja Fareed University of Engineering & Information Technology (KFUEIT)",
+      href: "https://kfueit.edu.pk/",
+    },
+    date: "2026 - Present",
+    location: "Rahim Yar Khan, Pakistan",
+    description:
+      "Currently pursuing a Master of Science in Computer Science, focusing on advanced computing concepts, research, and practical applications in software engineering and artificial intelligence.",
+  },
+  {
     title: "Bachelor of Science in Computer Science (BSCS)",
     organisation: {
       name: "Khwaja Fareed University of Engineering & Information Technology (KFUEIT)",

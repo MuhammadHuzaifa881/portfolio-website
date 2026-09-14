@@ -1,3 +1,4 @@
+"use client";
 import { Dispatch, Fragment, SetStateAction } from "react";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";

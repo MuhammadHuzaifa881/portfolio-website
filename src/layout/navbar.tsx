@@ -1,7 +1,8 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import { AnimatePresence, motion } from "framer-motion";
 
 import MenuLogo from "@/components/utility/menu-button";
@@ -21,7 +22,7 @@ export interface NavbarProps {
   routes: NavbarRoutes;
 }
 
-export default function Navbar(props: NavbarProps) {
+export default function Navbar({ routes }: NavbarProps) {
   const pathName = usePathname();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -42,53 +43,59 @@ export default function Navbar(props: NavbarProps) {
             <AnimatedLogo />
           </div>
         </Link>
+
         <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex">
           <ul className="flex gap-2 text-sm font-medium">
-            {props.routes.map((_link, index) => {
+            {routes.map((link) => {
+              const isActive = pathName === link.href;
+
               return (
                 <li
-                  key={index}
+                  key={link.href}
                   className="my-3 transition-transform duration-100 hover:scale-[1.1]"
                 >
                   <Link
-                    href={_link.href}
+                    href={link.href}
                     className={classNames(
-                      pathName === _link.href
+                      isActive
                         ? "font-semibold text-background dark:hover:text-foreground"
                         : "text-foreground",
                       "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
                     )}
                   >
-                    {_link.href === pathName && (
-                      <motion.span
-                        layoutId="tab-pill"
-                        animate={{
-                          transition: {
-                            x: {
-                              type: "spring",
-                              stiffness: 300,
-                              damping: 30,
-                            },
-                          },
-                        }}
-                        className="absolute inset-0 -z-10 rounded-full bg-accent group-hover:bg-accent/80"
-                      ></motion.span>
-                    )}
-                    {_link.title}
+                    <motion.span
+                      layoutId="tab-pill"
+                      initial={false}
+                      animate={{
+                        opacity: isActive ? 1 : 0,
+                        scale: isActive ? 1 : 0.8,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                      className="absolute inset-0 -z-10 rounded-full bg-accent group-hover:bg-accent/80"
+                      aria-hidden="true"
+                    />
+
+                    <span className="relative z-10">{link.title}</span>
                   </Link>
                 </li>
               );
             })}
           </ul>
+
           <ThemeSwitch />
         </nav>
+
         <AnimatePresence>
           <MenuLogo open={isModalOpen} toggle={toggleModal} />
         </AnimatePresence>
       </div>
 
       <MobileMenu
-        routes={props.routes}
+        routes={routes}
         openMenu={isModalOpen}
         setOpenMenu={setIsModalOpen}
       />

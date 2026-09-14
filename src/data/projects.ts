@@ -15,7 +15,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   },
   {
     index: 1,
-    title: "Many Games",
+    title: "Mega Cart",
     href: "/projects",
     tags: [
       "Reactjs",
@@ -27,18 +27,18 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       "Vercel",
     ],
     image: {
-      LIGHT: "/images/projects/manyGamesLight.webp",
-      DARK: "/images/projects/manyGamesDark.webp",
+      LIGHT: "/images/projects/mega-cart/1.png",
+      DARK: "/images/projects/mega-cart/2.png",
     },
   },
   {
     index: 2,
-    title: "Kanban",
+    title: "React Bank",
     href: "/projects",
     tags: ["Reactjs", "Vite", "Tailwindcss", "Vercel", "Zustand", "React DND"],
     image: {
-      LIGHT: "/images/projects/kanbanLight.webp",
-      DARK: "/images/projects/kanbanDark.webp",
+      LIGHT: "/images/projects/mega-cart/1.png",
+      DARK: "/images/projects/mega-cart/2.png",
     },
   },
 ];
